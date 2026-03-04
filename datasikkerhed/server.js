@@ -6,7 +6,6 @@ const path = require("node:path");
 
 const app = express();
 
-// EJS template engine (krav: EJS/Pug) :contentReference[oaicite:3]{index=3}
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
@@ -15,7 +14,7 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use(
   session({
-    secret: "Supersecret3",
+    secret: "nuerjegendeligflyttettilvingestationsbyifrederikssundtakforforståelsen1707",
     resave: false,
     saveUninitialized: false,
     cookie: {
