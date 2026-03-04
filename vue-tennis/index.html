@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Scoreboard</title>
+</head>
+<body>
+<div id="app">
+
+<h1>Scoreboard</h1>
+
+<div class="score">
+{{ nameA }}: {{ a }}
+</div>
+
+<button v-on:click="addA" v-bind:disabled="isOver">
++1 {{ nameA }}
+</button>
+
+<div class="score">
+{{ nameB }}: {{ b }}
+</div>
+
+<button v-on:click="addB" v-bind:disabled="isOver">
++1 {{ nameB }}
+</button>
+
+<p class="status">
+{{ statusText }}
+</p>
+
+<button v-on:click="reset">
+Nulstil
+</button>
+
+</div>
+
+
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+<script>
+const app = Vue.createApp({
+
+data(){
+return{
+a:0,
+b:0,
+nameA:"Spiller A",
+nameB:"Spiller B"
+}
+},
+
+mounted(){
+this.setNames()
+},
+
+computed:{
+
+isDraw(){
+return this.a===11 && this.b===11
+},
+
+winner(){
+
+// vinder hvis mindst 6 point og 2 mere end modstanderen
+if(this.a>=6 && (this.a-this.b)>=2) return "A"
+
+if(this.b>=6 && (this.b-this.a)>=2) return "B"
+
+return null
+},
+
+isOver(){
+return this.isDraw || this.winner!==null
+},
+
+statusText(){
+
+if(this.isDraw) return "Uafgjort (11-11)"
+
+if(this.winner==="A") return this.nameA + " har vundet!"
+
+if(this.winner==="B") return this.nameB + " har vundet!"
+
+return "Spillet er i gang"
+}
+
+},
+
+methods:{
+
+setNames(){
+
+// prompt bruges til at få spillernavne
+const a = prompt("Navn på spiller A", this.nameA)
+
+const b = prompt("Navn på spiller B", this.nameB)
+
+if(a) this.nameA = a
+
+if(b) this.nameB = b
+},
+
+addA(){
+
+// stop scoring hvis spillet er slut
+if(!this.isOver) this.a++
+},
+
+addB(){
+
+if(!this.isOver) this.b++
+},
+
+reset(){
+
+this.a=0
+this.b=0
+}
+
+}
+
+})
+
+app.mount("#app")
+</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="da">
+<head>
+  <meta charset="utf-8" />
+  <title>Login</title>
+</head>
+<body>
+  <h1>Login</h1>
+
+  <% if (error) { %>
+    <p style="color:red;"><%= error %></p>
+  <% } %>
+
+  <form method="post" action="/login" autocomplete="off">
+    <label>Brugernavn <input name="username" required></label><br>
+    <label>Password <input type="password" name="password" required></label><br>
+    <button>Log ind</button>
+  </form>
+</body>
+</html>

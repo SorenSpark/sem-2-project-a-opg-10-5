@@ -1,0 +1,12 @@
+[
+  {
+    "id": 1,
+    "username": "tobias",
+    "passwordHash": "$2b$10$.1o4mnf75.DETAkYGR8O5OnKTsbDURb2ZVrcmmYjSbGuJIEMn.OPK"
+  },
+  {
+    "id": 2,
+    "username": "alex",
+    "passwordHash": "$2b$10$.1o4mnf75.DETAkYGR8O5OnKTsbDURb2ZVrcmmYjSbGuJIEMn.OPK"
+  }
+]
