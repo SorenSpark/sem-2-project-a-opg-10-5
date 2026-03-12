@@ -2,11 +2,11 @@
   {
     "id": 1,
     "username": "tobias",
-    "passwordHash": "$2b$10$.1o4mnf75.DETAkYGR8O5OnKTsbDURb2ZVrcmmYjSbGuJIEMn.OPK"
+    "passwordHash": "$2b$10$qbwBm667gkpM.gXBEELWU.QSeexECJqvO4SHxnb5hucm7gX7qoFVa"
   },
   {
     "id": 2,
     "username": "alex",
-    "passwordHash": "$2b$10$.1o4mnf75.DETAkYGR8O5OnKTsbDURb2ZVrcmmYjSbGuJIEMn.OPK"
+    "passwordHash": "$2b$10$qbwBm667gkpM.gXBEELWU.QSeexECJqvO4SHxnb5hucm7gX7qoFVa"
   }
 ]
