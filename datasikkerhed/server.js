@@ -20,7 +20,7 @@ app.use(
     cookie: {
       httpOnly: true, // beskytter session-cookie mod at blive læst af JS (XSS)
       sameSite: "lax",
-      secure: true,
+      secure: false,
       maxAge: 1000 * 60 * 60, // 1 time
     },
   })
